@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,500);
+
+$roboto-font: 'Raleway', sans-serif;
+
+$primary-font: $roboto-font;
+$font-color: #7C8B88;
+$header-color: #FFFFFF;
+$primary-color: #33BEBE;
+
+@mixin element-conf($margin)
+{
+   margin-left: $margin;
+   margin-right: $margin;
+}
+
+@mixin font-size($header-size, $body-size)
+{
+  p
+  {
+     font-size: $body-size;
+  }
+
+  h1
+  {
+      font-size: $header-size;
+  }
+}
+
+*
+{
+   font-family: $primary-font;
+   text-rendering: optimizeLegibility;
+}
+
+h1
+{
+  background-color: $primary-color;
+  color: $header-color;
+  padding-top: 40px; //Margen del cuadro
+  margin-top: 300px; //posicionamiento
+  line-height: 1.5;
+  text-indent: 30px;
+  font-weight: 200;
+}
+
+p
+{
+   color: $font-color;
+   font-weight: 500;
+}
+
+img
+{
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+}
+
+.aligned-text
+{
+  margin-top: 70px;
+}
+
+/* Small -mobile*/
+@media screen and (min-width: 20em)
+{
+   *
+   {
+      @include element-conf(20px);
+   }
+
+   @include font-size(50px, 24px);
+
+   img
+   {
+      margin-bottom: 40px;
+   }
+}
+
+/*Medium - Tablet */
+@media (min-width: 40em)
+{
+   *
+   {
+      @include element-conf(40px);
+   }
+
+   @include font-size(70px, 24px);
+
+   .aligned-text
+   {
+      margin-top: 50px;
+   }
+
+   img
+   {
+     padding-right: 10px;
+   }
+
+}
+
+/*large - Desktop*/
+@media  (min-width: 64em)
+{
+   *
+   {
+      @include element-conf(200px);
+   }
+
+   @include font-size(70px, 35px);
+
+   img
+   {
+     margin-right: 35px;
+   }
+}
