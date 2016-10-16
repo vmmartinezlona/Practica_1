@@ -1,8 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,500);
 
-$roboto-font: 'Raleway', sans-serif;
-
-$primary-font: $roboto-font;
+$primary-font: 'Raleway', sans-serif;
 $font-color: #7C8B88;
 $header-color: #FFFFFF;
 $primary-color: #33BEBE;
@@ -41,6 +39,7 @@ h1
   line-height: 1.5;
   text-indent: 30px;
   font-weight: 200;
+  text-transform: uppercase;
 }
 
 p
@@ -61,6 +60,23 @@ img
 {
   margin-top: 70px;
 }
+
+/*large - Desktop*/
+@media  (min-width: 64em)
+{
+   *
+   {
+      @include element-conf(200px);
+   }
+
+   @include font-size(70px, 35px);
+
+   img
+   {
+     margin-right: 35px;
+   }
+}
+
 
 /* Small -mobile*/
 @media screen and (min-width: 20em)
@@ -98,20 +114,4 @@ img
      padding-right: 10px;
    }
 
-}
-
-/*large - Desktop*/
-@media  (min-width: 64em)
-{
-   *
-   {
-      @include element-conf(200px);
-   }
-
-   @include font-size(70px, 35px);
-
-   img
-   {
-     margin-right: 35px;
-   }
 }
