@@ -5,33 +5,118 @@
 
 .principal {
   background-color: #E8E8E7;
-  margin-left: 500px;
-  margin-top: 120px;
-  width: 990px; }
+  margin-top: 60px; }
 
 .inside-text {
-  background-color: #FFFFFF;
-  margin-top: 20px;
-  margin-left: 250px;
-  margin-right: 250px;
-  padding-left: 20px; }
+  background-color: #FFFFFF; }
+
+.title {
+  margin-top: 15%;
+  margin-left: 25%;
+  height: auto;
+  width: auto;
+  border-color: #FFFFFF;
+  border-width: 2px;
+  border-style: solid;
+  position: absolute;
+  color: #FFFFFF;
+  text-align: center; }
+  .title .subtitle {
+    display: block;
+    text-transform: uppercase; }
 
 hr {
   background-color: #8BCC98;
   margin: 0 0 0 0;
-  height: 20px;
   border-width: 0; }
 
 p {
-  text-indent: 100px;
-  font-weight: 500;
-  font-size: 17px; }
+  font-weight: 500; }
 
 .header1 {
   display: block;
   line-height: 3;
   text-indent: 20px;
-  font-weight: 700;
-  font-size: 22px; }
+  font-weight: 700; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+/*Small-mobile*/
+@media screen and (min-width: 20em) {
+  .principal {
+    margin-left: 5%;
+    width: 90%; }
+
+  .title {
+    font-size: 35px; }
+    .title .subtitle {
+      font-size: 15px; }
+
+  .inside-text {
+    margin: 3% 20% 0 20%;
+    padding-left: 2%;
+    padding-right: 2%; }
+
+  hr {
+    height: 8px; }
+
+  .header1 {
+    font-size: 15px; }
+
+  p {
+    font-size: 12px;
+    text-indent: 50px; } }
+/*Medium - Tablet*/
+@media screen and (min-width: 40em) {
+  .principal {
+    margin-left: 7%;
+    width: 80%; }
+
+  .title {
+    font-size: 50px; }
+    .title .subtitle {
+      font-size: 20px; }
+
+  .inside-text {
+    margin: 2% 20% 0 20%;
+    padding-left: 2%;
+    padding-right: 2%; }
+
+  hr {
+    height: 13px; }
+
+  .header1 {
+    font-size: 17px; }
+
+  p {
+    font-size: 15px;
+    text-indent: 75px; } }
+/*large - Desktop*/
+@media screen and (min-width: 64em) {
+  .principal {
+    margin-left: 13%;
+    width: 75%; }
+
+  .title {
+    font-size: 70px; }
+    .title .subtitle {
+      font-size: 30px; }
+
+  .inside-text {
+    margin: 3% 30% 0 30%;
+    padding-left: 2%;
+    padding-right: 2%; }
+
+  hr {
+    height: 20px; }
+
+  .header1 {
+    font-size: 22px; }
+
+  p {
+    font-size: 17px;
+    text-indent: 100px; } }
 
 /*# sourceMappingURL=main.css.map */

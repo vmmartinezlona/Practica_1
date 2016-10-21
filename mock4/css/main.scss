@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
+
+$primary-font: 'Raleway', sans-serif;
+
+$primary-color: #D5245B;
+$background-color: #131A2D;
+$container-color: #D0C4AB;
+$text-color: $container-color;
+$title-color: $background-color;
+
+@mixin font-conf($size, $weight, $color, $align, $transform)
+{
+   font-size: $size;
+   font-weight: $weight;
+   color: $color;
+   text-align: $align;
+   text-transform: $transform;
+}
+
+@mixin font-size($h1-size, $h2-size, $h3-size)
+{
+   h1 { @include font-conf($h1-size, 900, $title-color, right, uppercase); }
+   h2 { @include font-conf($h2-size, 400, $text-color, auto, capitalize); }
+   h3 { @include font-conf($h3-size, 400, $text-color, right, uppercase); }
+}
+
+@mixin sub-container-font($title-size, $text-size)
+{
+   .sub-container
+   {
+      p { font-size: $title-size; }
+
+      .header { font-size: $text-size; }
+  }
+}
+
+*
+{
+   font-family: $primary-font;
+   text-rendering: optimizeLegibility;
+}
+
+h1
+{
+   padding-top: 30px;
+   padding-right: 7%;//75px;
+   margin-bottom: 0;
+}
+
+h2
+{
+   margin-bottom: 15px;
+   text-indent: 30px;
+}
+
+h3
+{
+   padding-right: 7%;//75px;
+   text-transform: uppercase;
+   margin-top: 0;
+}
+
+hr
+{
+   background-color: $text-color;
+   margin: 0 0 0 0;
+   height: 5px;
+   border-width: 0;
+   margin-left: 15%;
+   width: 77%;
+}
+
+.container
+{
+   background-color: $background-color;
+   margin-left: 15%;
+   width: 77%;
+   height: 1125px;
+}
+
+.sub-container
+{
+   color: $text-color;
+   float: left;
+   width: 47%;
+   margin-left: 2%;
+   text-align: center;
+
+   p
+   {
+     margin-top: 0;
+     position: relative;
+   }
+
+    .header
+    {
+      font-weigth: 900;
+      margin-top: 15px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+}
+
+img
+{
+  width: 100%;
+  height: auto;
+}
+
+@media  screen and (min-width: 20em)
+{
+   @include sub-container-font(10px, 15px);
+   @include font-size(30px, 25px, 15px);
+   .container { height: 600px; }
+}
+
+@media screen and (min-width: 40em)
+{
+   @include sub-container-font(15px, 30px);
+   @include font-size(40px, 30px, 20px);
+   .container { height: 1000px; }
+}
+
+@media  screen and (min-width: 64em)
+{
+   @include sub-container-font(15px, 30px);
+   @include font-size(50px, 40px, 20px);
+   .container { height: 1125px; }
+}

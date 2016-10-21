@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,500);
+
+$primary-font: 'Raleway', sans-serif;
+
+$user-icon: url('https://d28i76lqzybkdl.cloudfront.net/images/web_assets/joinexperticon.png');//('http://seafood-india.com/assets/img/blue-user-icon.png');
+$pass-icon: url('http://web.givex.com/files/Images/products/icons/loyalty_Icon_Lock.png');
+
+$grad-color-1: #045d8d;
+$grad-color-2: #56bfcf;
+$button-color: #01c853;
+
+@mixin font-size($text-size: 15px)
+{
+  * { font-size: $text-size; }
+  h1 { font-size: 30px;}
+
+}
+
+*
+{
+   color: white;
+   font-family: $primary-font;
+   text-rendering: optimizeLegibility;
+}
+
+body
+{
+   background: $grad-color-2; /* For browsers that do not support gradients */
+   background: -webkit-linear-gradient(top right, $grad-color-1 , $grad-color-2); /* For Safari 5.1 to 6.0 */
+   background: -o-linear-gradient(top right, $grad-color-1 , $grad-color-2); /* For Opera 11.1 to 12.0 */
+   background: -moz-linear-gradient(top right, bottom left, $grad-color-1 , $grad-color-2); /* For Firefox 3.6 to 15 */
+   background: linear-gradient(top right, $grad-color-1 , $grad-color-2);// $grad-color-1 , $grad-color-2, $grad-color-3); /* Standard syntax */
+}
+
+.container
+{
+   color: white;
+   margin-top: 10%;
+   margin-bottom: 10%;
+   margin-left: 30%;
+   margin-right: 30%;
+}
+
+h1
+{
+    text-align: center;
+}
+
+p
+{
+   text-align: center;
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+input
+{
+   margin-left:5%;
+   margin-right: auto;
+   margin-top: 30px;
+   width: 90%;
+   height: 50px;
+   background-position: right;
+   background-repeat: no-repeat;
+   color: black;
+}
+
+input[type = checkbox]
+{
+   width: auto;
+   height: auto;
+}
+
+.input-email
+{
+   background-image: $user-icon;
+}
+
+.input-pass
+{
+  background-image: $pass-icon;
+}
+
+
+button
+{
+   background-color: $button-color;
+   border-width: 0;
+   margin-left:5%;
+   margin-right: auto;
+   margin-top: 30px;
+   width: 90%;
+   height: 50px;
+}
+
+a
+{
+   margin: 33%;
+
+   &:hover
+   {
+     text-decoration: underline;
+   }
+}
+
+@media  screen and (min-width: 20em)
+{
+   @include font-size(10px);
+}
+
+@media screen and (min-width: 40em)
+{
+   @include font-size();
+}
+
+@media  screen and (min-width: 64em)
+{
+   @include font-size();
+}

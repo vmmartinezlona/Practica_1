@@ -5,23 +5,21 @@ $font-color: #7C8B88;
 $header-color: #FFFFFF;
 $primary-color: #33BEBE;
 
-@mixin element-conf($margin)
+@mixin element-conf($margin, $aligned-text: 5px)
 {
-   margin-left: $margin;
-   margin-right: $margin;
+  *
+  {
+      margin-left: $margin;
+      margin-right: $margin;
+  }
+
+  .aligned-text { margin-top: $aligned-text; }
 }
 
 @mixin font-size($header-size, $body-size)
 {
-  p
-  {
-     font-size: $body-size;
-  }
-
-  h1
-  {
-      font-size: $header-size;
-  }
+   p { font-size: $body-size; }
+   h1 { font-size: $header-size; }
 }
 
 *
@@ -34,11 +32,11 @@ h1
 {
   background-color: $primary-color;
   color: $header-color;
-  padding-top: 40px; //Margen del cuadro
-  margin-top: 300px; //posicionamiento
   line-height: 1.5;
-  text-indent: 30px;
+  text-indent: 20px;
   font-weight: 200;
+  padding-top: 5%;//30px; //Margen del cuadro
+  margin-top: 10%; //posicionamiento
   text-transform: uppercase;
 }
 
@@ -53,65 +51,30 @@ img
   float: left;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 5px;
   width: auto;
 }
-
-.aligned-text
-{
-  margin-top: 70px;
-}
-
-/*large - Desktop*/
-@media  (min-width: 64em)
-{
-   *
-   {
-      @include element-conf(200px);
-   }
-
-   @include font-size(70px, 35px);
-
-   img
-   {
-     margin-right: 35px;
-   }
-}
-
 
 /* Small -mobile*/
 @media screen and (min-width: 20em)
 {
-   *
-   {
-      @include element-conf(20px);
-   }
-
-   @include font-size(50px, 24px);
-
-   img
-   {
-      margin-bottom: 40px;
-   }
+   @include element-conf(2%, 10px);
+   @include font-size(30px, 15px);
 }
 
 /*Medium - Tablet */
-@media (min-width: 40em)
+@media screen and (min-width: 40em)
 {
-   *
-   {
-      @include element-conf(40px);
-   }
 
-   @include font-size(70px, 24px);
+  @include element-conf(5%, 10px);
+  @include font-size(35px, 15px);
+   img { padding-right: 15px; }
+}
 
-   .aligned-text
-   {
-      margin-top: 50px;
-   }
-
-   img
-   {
-     padding-right: 10px;
-   }
-
+/*large - Desktop*/
+@media  screen and (min-width: 64em)
+{
+  @include element-conf(5%, 10px);
+  @include font-size(35px, 20px);
+   img { margin-right: 15px; }
 }

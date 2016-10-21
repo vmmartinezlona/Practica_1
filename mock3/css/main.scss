@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,500);
+
+$primary-font: 'Raleway', sans-serif;
+
+$symbol-color: #F8981C;
+$subtitle-color: #BCBBBB;
+$text-color: #747704;
+
+@mixin font-conf($font-size, $font-weight, $text-align: auto)
+{
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-align: $text-align;
+}
+
+@mixin sub-container-header($header-size: 20px)
+{
+     .header { @include font-conf($header-size, 500, center); }
+}
+
+*
+{
+   font-family: $primary-font;
+   text-rendering: optimizeLegibility;
+   color: $text-color;
+}
+
+.sub-container, .sub-container-center
+{
+   float: left;
+   width: 32%;
+
+  p
+  {
+    margin-top: 0;
+    position: relative;
+    @include font-conf(15px, 100, center);
+  }
+
+   .header
+   {
+     margin-top: 15px;
+     margin-bottom: 0;
+     text-transform: uppercase;
+   }
+
+   img
+   {
+      width: 100%;
+      height: auto;
+   }
+
+}
+
+.sub-container-center
+{
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+
+h1
+{
+   @include font-conf(50px, 100, right);
+   text-transform: uppercase;
+   margin-bottom: 0;
+}
+
+h2
+{
+  @include font-conf(30px, 400);
+  color: $subtitle-color;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  text-indent: 15px;
+}
+
+h3
+{
+   @include font-conf(20px, 100, right);
+   text-transform: uppercase;
+   margin-top: 0;
+}
+
+h4
+{
+  @include font-conf(25px, 500, center);
+  margin-top: 15px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+hr
+{
+   background-color: $subtitle-color;
+   margin: 0 0 0 0;
+   height: 5px;
+   border-width: 0;
+}
+
+.main-image
+{
+   margin-top: 30px;
+   width: 100%;
+   height: auto;
+}
+
+.container
+{
+   width: 77%;
+   margin-left: 10%;
+}
+
+@media  screen and (min-width: 20em)
+{
+   @include sub-container-header();
+}
+
+@media screen and (min-width: 40em)
+{
+   @include sub-container-header();
+}
+
+@media  screen and (min-width: 64em)
+{
+   @include sub-container-header(25px);
+}

@@ -1,18 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,500);
 * {
   font-family: "Raleway", sans-serif;
-  text-rendering: optimizeLegibility;
-  margin-left: 20px;
-  margin-right: 20px; }
+  text-rendering: optimizeLegibility; }
 
 h1 {
   background-color: #33BEBE;
   color: #FFFFFF;
-  padding-top: 40px;
-  margin-top: 300px;
   line-height: 1.5;
-  text-indent: 30px;
-  font-weight: 200; }
+  text-indent: 20px;
+  font-weight: 200;
+  padding-top: 5%;
+  margin-top: 10%;
+  text-transform: uppercase; }
 
 p {
   color: #7C8B88;
@@ -22,62 +21,56 @@ img {
   float: left;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 5px;
   width: auto; }
 
-.aligned-text {
-  margin-top: 70px; }
-
-p {
-  font-size: 24px; }
-
-h1 {
-  font-size: 50px; }
-
 /* Small -mobile*/
-/*{
-   *
-   {
-      @include element-conf(20px);
-   }
-
-   @include font-size(50px, 24px);
-
-   img
-   {
-      margin-bottom: 40px;
-   }
-
-//}*/
-/*Medium - Tablet */
-@media (min-width: 40em) {
+@media screen and (min-width: 20em) {
   * {
-    margin-left: 40px;
-    margin-right: 40px; }
-
-  p {
-    font-size: 24px; }
-
-  h1 {
-    font-size: 70px; }
+    margin-left: 2%;
+    margin-right: 2%; }
 
   .aligned-text {
-    margin-top: 50px; }
-
-  img {
-    padding-right: 10px; } }
-/*large - Desktop*/
-@media (min-width: 64em) {
-  * {
-    margin-left: 200px;
-    margin-right: 200px; }
+    margin-top: 10px; }
 
   p {
-    font-size: 35px; }
+    font-size: 15px; }
 
   h1 {
-    font-size: 70px; }
+    font-size: 30px; } }
+/*Medium - Tablet */
+@media screen and (min-width: 40em) {
+  * {
+    margin-left: 5%;
+    margin-right: 5%; }
+
+  .aligned-text {
+    margin-top: 10px; }
+
+  p {
+    font-size: 15px; }
+
+  h1 {
+    font-size: 35px; }
 
   img {
-    margin-right: 35px; } }
+    padding-right: 15px; } }
+/*large - Desktop*/
+@media screen and (min-width: 64em) {
+  * {
+    margin-left: 5%;
+    margin-right: 5%; }
+
+  .aligned-text {
+    margin-top: 10px; }
+
+  p {
+    font-size: 20px; }
+
+  h1 {
+    font-size: 35px; }
+
+  img {
+    margin-right: 15px; } }
 
 /*# sourceMappingURL=main.css.map */
